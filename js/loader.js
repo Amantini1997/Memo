@@ -19,21 +19,6 @@ function loadContent() {
     // setCalendarCallback();
 }
 
-function lock(orientation = "portrait") {
-    // if (document.documentElement.requestFullscreen) {
-    //   document.documentElement.requestFullscreen();
-    // } else if (document.documentElement.mozRequestFullScreen) {
-    //   document.documentElement.mozRequestFullScreen();
-    // } else if (document.documentElement.webkitRequestFullscreen) {
-    //   document.documentElement.webkitRequestFullscreen();
-    // } else if (document.documentElement.msRequestFullscreen) {
-    //   document.documentElement.msRequestFullscreen();
-    // }
-  
-    // Then lock orientation
-    screen.orientation.lock(orientation);
-  }
-
 function loadSwiper() {
     var swiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
