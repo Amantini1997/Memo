@@ -14,7 +14,7 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": "/",
+    "start_url": "/Memo/index.html",
     "background_color": "#45e6a3",
     "display": "fullscreen",
     "scope": "/",
