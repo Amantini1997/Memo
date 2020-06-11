@@ -17,6 +17,6 @@
     "start_url": "/Memo",
     "background_color": "#45e6a3",
     "display": "fullscreen",
-    "scope": "/Memo",
+    "scope": "/",
     "theme_color": "#45e6a3"
 }
