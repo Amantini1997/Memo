@@ -29,7 +29,7 @@ window.generateMemo = () => {
 
 function displayErrorModal(error) {
     const modal = document.getElementById("error-modal");
-    modal.innerHTML = `${error} <img src="/img/cross.png">`;
+    modal.innerHTML = `${error} <img src="img/cross.png">`;
     modal.classList.remove("display");
     modal.classList.add("display");
     setTimeout(() => modal.classList.remove("display"), 4000);  
