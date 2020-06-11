@@ -1,6 +1,6 @@
 var CACHE_NAME = 'memoes_cache';
 var urlsToCache = [
-  '',
+  '/',
   // css
   'css/generateMemo.css',
   'css/index.css',

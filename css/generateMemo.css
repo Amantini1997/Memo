@@ -98,17 +98,21 @@
 
 /* TITLE */
 
-.title-input {
+.title-input {    
+    width: 100%;
     display: flex;
-    justify-content: left;
-    grid-template-columns: 1fr 8fr;
+    /* justify-content: left; */
+    /* grid-template-columns: 1fr 8fr; */
     align-items: center;
 }
 
-.title-input > input {
-    flex-grow: 1;
+.title-input > label {
+    width: 20%;
 }
 
+.title-input > input {
+    max-width: 75%;
+}
 
 /* DATE-TIME */
 
