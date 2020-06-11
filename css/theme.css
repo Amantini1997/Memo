@@ -1,0 +1,60 @@
+[data-theme="dark"] {    
+    --main-bg-color-1: #3a083b;
+    --main-bg-color-2: rgb(63, 12, 102);
+    --bg-color: #d5d5d5;
+
+    --success-color: rgb(22, 178, 26);;
+    --error-color: red;
+    --line-color: #a2a2a2;
+    --contrast-color: #d5d5d5;
+
+    --text-color: black;
+
+    --header-text-color: var(--bg-color);
+    --header-bg-color-1: var(--main-bg-color-1);
+    --header-bg-color-2: var(--main-bg-color-1);
+
+    --days-text-color: var(--main-bg-color-1);
+    --days-bg-color: #d5d5d5;
+    --days-border-color: var(--main-bg-color-1);
+
+    --border-color: var(--main-bg-color-1);
+
+    --cell-text-color: black;
+    --cell-bg-color: #d5d5d5;
+    --cell-non-current-text-color: rgb(88, 88, 88);
+    --cell-non-current-bg-color: #b0b0b0;
+    --cell-selected-text-color: white;
+    --cell-selected-bg-color: var(--main-bg-color-1);
+}
+
+[data-theme="light"] {
+    --main-bg-color-1: rgb(69, 230, 163);
+    --main-bg-color-2: rgb(23, 80, 113);
+    --bg-color: white;
+
+    --success-color: green;
+    --error-color: red;
+    /* --line-color: #e1e1e1; */
+    --line-color: #cecece;
+    --contrast-color: black;
+
+    --text-color: black;
+
+    --header-text-color: var(--bg-color);
+    --header-bg-color-1: var(--main-bg-color-2);
+    --header-bg-color-2: var(--main-bg-color-2);
+
+    --days-text-color: var(--main-bg-color-2);
+    --days-bg-color: white;
+    --days-border-color: var(--main-bg-color-2);
+
+    --border-color: var(--main-bg-color-2);
+
+    --cell-text-color: black;
+    --cell-bg-color: white;
+    --cell-non-current-text-color: rgb(88, 88, 88);
+    --cell-non-current-bg-color: lightgray;
+    --cell-selected-text-color: white;
+    --cell-selected-bg-color: var(--main-bg-color-2);
+}

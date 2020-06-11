@@ -1,0 +1,187 @@
+/* ----------------------------------------- */
+/* --------------- TOP MODAL --------------- */
+/* ----------------------------------------- */
+
+.top-modal {
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    position: absolute;
+    opacity: 0;
+    /* top: calc(var(--page-title-height) * -1); */
+    height: 100px;
+    width: calc(100vw - var(--padding-page)*2);
+    padding: 20px;
+    margin-top: -10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 10px 20px black;
+    font-weight: 700;
+    font-size: var(--top-modal-font-size);
+    visibility: hidden;
+}
+
+.top-modal > img {
+    height: -webkit-fill-available;
+}
+
+.top-modal.display {
+    animation: fade-in-top-modal 4s;
+}
+
+@keyframes fade-in-top-modal {
+    0% {
+        visibility: visible;
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+        margin-top: 10px;
+    }
+    85% {
+        opacity: 1;
+        margin-top: 10px;
+    }
+    100% {
+        visibility: visible;
+        opacity: 0;
+    }
+}
+
+/* ----------------------------------------- */
+/* --------------- MEMO ADDER -------------- */
+/* ----------------------------------------- */
+#add-memo-ctn {
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    height: 70vh;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: -1px 10px 20px black;
+}
+
+#add-memo-ctn > :not(:last-child) {
+    height: 17%;
+    padding-bottom: 2.5%;
+}
+
+#add-memo-ctn > :last-child {
+    padding-top: 5%;
+    padding-bottom: 0%;
+}
+
+#add-memo-ctn label {
+    font-weight: 600;
+    font-size: larger;
+    margin: 0px 0px 0px 10px;
+    padding-top: 0px; 
+}
+
+/* #add-memo-ctn label:first {
+    padding-top: 0px;
+} */
+
+#add-memo-ctn input {
+    border: none;
+    border-bottom: 1px solid var(--line-color);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    text-align: center;
+    font-size: calc(var(--std-text-size) * .9);
+    background-color: var(--bg-color);
+} 
+
+
+/* TITLE */
+
+.title-input {
+    display: flex;
+    justify-content: left;
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+}
+
+.title-input > input {
+    flex-grow: 1;
+}
+
+
+/* DATE-TIME */
+
+.datetime-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* grid-template-columns: 1fr 3fr 1fr 2fr; */
+    background-color: var(--bg-color);
+}
+
+.datetime-input > #date {
+    width: calc(100% / 7 * 3);
+}
+
+.datetime-input > #time {
+    width: calc(100% / 7 * 1.4);
+}
+
+
+/* TEXT AREA */
+
+#add-memo-ctn > .textarea-input {
+    display: flex;
+    flex-direction: column;
+    height: 66%;
+}
+
+#add-memo-ctn textarea {
+    box-shadow: inset -1px 2px 18px -7px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--bg-color);
+    border: none;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+
+
+/* ----------------------------------------- */
+/* ---------------- BUTTONS ---------------- */
+/* ----------------------------------------- */
+
+#btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    padding-top: 7vh;
+}
+
+#btn-container > button {
+    border-radius: 20px;
+    border: none;
+    width: 80%;
+    height: 7vh;
+    margin: auto;
+    font-size: larger;
+    font-weight: 500;
+    box-shadow: 6px 9px 11px -6px black;
+    transition: all .3s;
+}
+
+#btn-container > button:active {
+    transform: translate(0, 2px) scale3d(.95, .95, 1);
+    box-shadow: none;
+}
+
+#cancel-btn {
+    background-color: var(--error-color);
+    color: white;
+}
+
+#add-btn {
+    background-color: var(--success-color);
+    color: white;
+} 

@@ -1,0 +1,154 @@
+:root {
+    --page-title-height: 9vh;
+    --page-title-font-size: 7vh;
+    --page-title-margin-bottom: 15px;
+    --padding-page: 20px;
+    --border-radius: 10px;
+    --max-height-no-title: calc(100vh - var(--page-title-height) - var(--page-title-margin-bottom));
+    --modal-animation-time: .2s;
+    --modal-content-animation-time: .2s;
+    --top-modal-font-size: 3vh; 
+    --std-text-size: 3vh;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+    font-size: var(--std-text-size);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* *[id$="page"] */
+.swiper-slide {
+    padding: var(--padding-page);
+    padding-top: calc(var(--padding-page) - var(--page-title-margin-bottom));
+    margin: auto;
+}
+
+textarea {
+    resize: none;
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(120deg, var(--main-bg-color-1), var(--main-bg-color-2));
+}
+
+#page-title {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--page-title-font-size);
+    width: 100vw;
+    height: var(--page-title-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: var(--page-title-margin-bottom);
+    overflow: hidden;
+    /* box-shadow: -1px 10px 20px black; */
+}
+
+.swiper-container {
+    width: 100vw;
+    height: var(--max-height-no-title);
+    /* overflow: visible; */
+    /* margin-top: var(--page-title-height); */
+}
+
+@media only screen and (hover: hover)
+{
+    /* SCROLL-BAR */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 4px;
+    }
+
+    ::-webkit-scrollbar::after {
+        content: "";
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, .6);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: transparent;
+    }
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+    background-color: var(--bg-color);
+    padding: 0;
+}
+
+/* section[class$="input"] {
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+label, input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+input {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+}
+  
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+}
+
+input:placeholder-shown + label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+} */

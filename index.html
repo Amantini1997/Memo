@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Memo">
+    <meta name="description" content="Write down your todoes, and never forget them">
+    <meta name="keywords" content="todo, todoes, memo, note, notes, meeting, meetings, appointment, appointments">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <title>Memo</title>
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="vendor/swiper/swiper.min.css">
+    <!-- PICKER -->
+    <link rel="stylesheet" href="vendor/picker/picker.min.css">
+    <!-- MEMO -->
+    <link rel="stylesheet" href="css/theme.css"> 
+    <link rel="stylesheet" href="css/modal.css"> 
+    <link rel="stylesheet" href="css/index.css"> 
+    <link rel="stylesheet" href="css/generateMemo.css">
+    <link rel="stylesheet" href="css/memolist.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body data-theme="light">
+    <!-- MEMO ADDER -->
+    <div id="page-title"> MEMOES </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div id="add-memo-page" class="swiper-slide">
+                <div id="success-modal" class="top-modal">
+                    Memo Added<img src="/img/tick.png">  
+                </div>
+                <div id="error-modal" class="top-modal">
+                    #placeholder
+                </div>
+                <form id="memo-form">
+                    <div id="add-memo-ctn">
+                        <section class="title-input">
+                            <label for="title">Title</label>
+                            <input id="title" type="text" tabindex="1" 
+                                   autocomplete="off" autofocus>
+                        </section>
+                        <section class="datetime-input">
+                            <label for="date">Date</label>
+                            <input id="date" type="text" class="form-control js-date-picker" 
+                                   autocomplete="off">
+                            <label for="time">Time</label>
+                            <input id="time" type="text" class="form-control js-time-picker"
+                                   autocomplete="off">
+                        </section>
+                        <section class="textarea-input">
+                            <label for="notes">Notes</label>
+                            <textarea id="notes" tabindex="4"></textarea>
+                        </section>
+                    </div>
+                    <div id="btn-container">
+                        <button type="reset" id="cancel-btn" onclick="cleanNonResettableFields()">Cancel</button>
+                        <button type="button" id="add-btn" onclick="generateMemo()">Add</button>
+                    </div>
+                </form>                
+            </div>
+            <!-- MEMOES -->
+            <div id="memo-list-page" class="swiper-slide">
+                <template id="memo-template">
+                    <div class="memo">
+                        <div class="memo-info">
+                            <div class="title">#placeholder</div>
+                            <hr />
+                            <div class="date-time">
+                                <div class="date" data-prefix="Date: ">#placeholder</div>
+                                <div class="time" data-prefix="Time: ">#placeholder</div>
+                            </div>
+                            <div class="notes" data-prefix="Notes:"><br/>#placeholder</div>
+                        </div>
+                        <div class="memo-btn-bar">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                </template>
+                <div id="empty-list-placeholder">YOU HAVE NO ACTIVE MEMOES</div>
+                <!-- CONFIRM DELETE MODAL -->
+                <section id="delete-confirm-modal" class="modal"> 
+                    <div id="delete-confirm-text-ctn">
+                        <div class="delete-confirm-text">
+                            Are you sure you want 
+                            <br/>
+                            to delete the memo:
+                            <br/>
+                            <strong id="delete-confirm-title">X</strong>
+                        </div>
+                        <div class="memo-btn-bar">
+                            <button class="delete" onclick="deleteMemo()">Delete</button>
+                            <button class="cancel" onclick="undoDeleteMemo()">Cancel</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- SETTINGS PAGE -->
+            <div id="settings-page" class="swiper-slide">
+                <ul>
+                    <li>
+                        <b>Dark Mode</b>
+                        <label class="switch" onclick="toggleDarkMode(this)">
+                          <input id="darkmode" type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <b>Language</b>
+                        
+                    </li>
+                    <li><b>Info</b></li>
+                    <li><b>Credits</b></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOADER.js -->
+    <script src="js/config.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/generateMemo.js"></script>
+    <script type="module" src="js/objects.js"></script>
+    <script type="module" src="js/memolist.js"></script>
+    <script type="module" src="js/loader.js"></script>
+    <!-- PWA -->
+    <script src="js/pwa.js"></script>
+    <!-- SWIPER.js -->
+    <script src="vendor/swiper/swiper.min.js"></script>
+    <!-- PICKER -->
+    <script src="vendor/picker/picker.min.js"></script>
+</script>
+</body>
+</html>

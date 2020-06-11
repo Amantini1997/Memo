@@ -1,0 +1,22 @@
+{
+    "short_name": "Memo",
+    "name": "Todo list",
+    "description": "Write down your todoes, and never forget them",
+    "icons": [
+        {
+            "src": "img/192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "img/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "brown",
+    "display": "fullscreen",
+    "scope": "/",
+    "theme_color": "black"
+}

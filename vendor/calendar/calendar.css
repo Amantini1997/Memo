@@ -1,0 +1,129 @@
+
+* {
+    outline: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --clnd-width: 300px;
+    --row-height: 30px;
+
+    --text-color: black;
+    --bg-color: white;
+
+    --header-text-color: white;
+    --header-bg-color-1: rgb(61, 27, 11);
+    --header-bg-color-2: rgb(61, 27, 11);
+
+    --days-text-color: rgb(61, 27, 11);
+    --days-bg-color: white;
+    --days-border-color: rgb(61, 27, 11);
+
+    --border-color: rgb(61, 27, 11);
+
+    --cell-text-color: black;
+    --cell-bg-color: white;
+    --cell-non-current-text-color: rgb(88, 88, 88);
+    --cell-non-current-bg-color: lightgray;
+    --cell-selected-text-color: white;
+    --cell-selected-bg-color: rgb(82, 34, 12);
+}
+
+#calendar {
+    box-shadow: -1px 10px 20px black;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 3%;
+    overflow: hidden;
+    width: var(--clnd-width);
+}
+
+#clnd-header {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--header-text-color);
+    background-image: linear-gradient(var(--header-bg-color-1), var(--header-bg-color-2));
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: var(--days-bg-color);
+    color: var(--days-text-color);
+    font-weight: 800;
+}
+
+.days > * {
+    border-bottom: solid 1px var(--days-border-color);
+    /* border-right: solid 1px var(--primary-color-dark); */
+}
+
+.days > *:last-child {
+    border-right: none;
+}
+
+.month-name {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+/* Arrows */
+[class$="arr"] {
+    font-size: xxx-large;
+    font-weight: bold;
+    padding-bottom: calc(var(--row-height) * .2);
+    background-color: inherit;
+    color: var(--header-text-color);
+    cursor: pointer;
+}
+
+#clnd-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.row {
+    width: 100%;
+    height: var(--row-height);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    text-align: center;
+    background-color: var(--cell-bg-color);
+}
+
+.cell {
+    background-color: var(--cell-non-current-bg-color);
+    color: var(--cell-non-current-text-color);
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell.current {
+    background-color: var(--cell-bg-color);
+    color: var(--cell-text-color);
+}
+
+.cell.selected {
+    background-color: var(--cell-selected-bg-color);
+    color: var(--cell-selected-text-color);
+    border-radius: 5px;
+    transition: color .2s, background-color .2s;
+}
+
+.cell:not(.selected) {
+    transition: color .2s, background-color .2s;
+}

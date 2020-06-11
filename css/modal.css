@@ -1,0 +1,150 @@
+
+
+.modal {
+    margin: auto;
+    z-index: 10;
+    opacity: 0;
+    width: 100vw;
+    height: var(--max-height-no-title);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    animation-duration: 0;
+}
+
+.modal.show {
+    animation: fade-in-modal var(--modal-animation-time) both;
+}
+
+.modal.no-show {
+    animation: fade-out-modal var(--modal-animation-time) both;
+    animation-delay: var(--modal-content-animation-time);
+}
+
+@keyframes fade-in-modal {
+    0% { 
+        z-index: 0;
+        visibility: hidden;
+    } 1% {
+        visibility: visible;
+        z-index: 10;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0);
+    } 100% {
+        visibility: visible;
+        opacity: 1;
+        background-color: rgba(0, 0, 0, .6);
+    }
+}
+
+@keyframes fade-out-modal {
+    0% { 
+        opacity: 1;
+        background-color: rgba(0, 0, 0, .6);
+        visibility: visible;
+    } 
+    99% {
+        z-index: 10;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+        z-index: 0;
+    }
+}
+
+/* .modal > * {
+    animation-duration: var(--modal-content-animation-time);
+} */
+
+.modal.show > * {
+    animation: slide-up var(--modal-content-animation-time) both;
+    animation-delay: var(--modal-animation-time);
+}
+
+.modal.no-show > * {
+    /* animation: slide-down var(--modal-content-animation-time) both; */
+    animation: slide-down var(--modal-content-animation-time) both;
+} 
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        margin-top: 5vh;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+        margin-top: 5vh;
+    }
+}
+
+/* .modal {
+    margin: auto;
+    z-index: 10;
+    width: 100vw;
+    height: var(--max-height-no-title);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: all var(--modal-animation-time);
+    -webkit-transition: all var(--modal-animation-time);
+    -moz-transition: all var(--modal-animation-time);
+    -o-transition: all var(--modal-animation-time);
+}
+
+.modal > * {
+    animation: all var(--modal-content-animation-time);
+    -webkit-animation: all var(--modal-content-animation-time);
+    -moz-animation: all var(--modal-content-animation-time);
+    -o-animation: all var(--modal-content-animation-time);
+}
+
+.modal.show {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal.show > * {
+    animation-delay: slide-up var(--modal-animation-time);
+    -webkit-animation-delay: slide-up var(--modal-animation-time);
+    -moz-animation-delay: slide-up var(--modal-animation-time);
+    -o-animation-delay: slide-up var(--modal-animation-time);
+}
+
+.modal:not(.show) {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.0);
+    
+    transition-delay: var(--modal-content-animation-time);    
+    -webkit-transition-delay: var(--modal-content-animation-time);
+    -moz-transition-delay: var(--modal-content-animation-time);
+    -o-transition-delay: var(--modal-content-animation-time);
+}
+
+.modal:not(.show) > * {
+    animation: slideup var(--modal-content-animation-time) reverse;
+    -webkit-animation: slideup var(--modal-content-animation-time) reverse;
+    -moz-animation: slideup var(--modal-content-animation-time) reverse;
+    -o-animation: slideup var(--modal-content-animation-time) reverse;
+} */
