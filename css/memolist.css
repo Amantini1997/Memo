@@ -49,7 +49,7 @@ hr {
 
 .date-time {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-bottom: 10px;
 }
 
@@ -123,7 +123,9 @@ hr {
     }
 }
 
-#delete-confirm-modal {    
+#delete-confirm-modal {
+    top: var(--page-title-height);
+    height: calc(100vh - var(--page-title-height));
 }
 
 #delete-confirm-text-ctn {

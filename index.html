@@ -2,11 +2,7 @@
 <head>
     <!-- META -->
     <meta charset="UTF-8">
-<<<<<<< HEAD
     <meta name="theme-color" content="#000000">
-=======
-    <meta name="theme-color" content="#45e6a3">
->>>>>>> b25a288e97227b1dbb0cbdf3d7c8f43453c80e64
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="title" content="Memo">
     <meta name="description" content="Write down your todoes, and never forget them">
@@ -30,12 +26,29 @@
     <!-- PWA -->
     <link rel="manifest" href="manifest.webmanifest">
 </head>
-<body data-theme="light">
+<body data-theme="light">            
+    <!-- CONFIRM DELETE MODAL -->
+    <section id="delete-confirm-modal" class="modal"> 
+        <div id="delete-confirm-text-ctn">
+            <div class="delete-confirm-text">
+                Are you sure you want 
+                <br/>
+                to delete the memo:
+                <br/>
+                <div id="delete-confirm-title">X</div>
+            </div>
+            <div class="memo-btn-bar">
+                <button class="delete" onclick="deleteMemo()">Delete</button>
+                <button class="cancel" onclick="undoDeleteMemo()">Cancel</button>
+            </div>
+        </div>
+    </section>
     <!-- MEMO ADDER -->
     <div id="page-title"> MEMOES </div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div id="add-memo-page" class="swiper-slide">
+            <div id="add-memo-page" class="swiper-slide">            
+                <!-- TOP MODAL -->
                 <div id="success-modal" class="top-modal">
                     Memo Added<img src="img/tick.png">  
                 </div>
@@ -67,7 +80,7 @@
                         <button type="button" id="add-btn" onclick="generateMemo()">Add</button>
                     </div>
                 </form>                
-            </div>
+            </div>        
             <!-- MEMOES -->
             <div id="memo-list-page" class="swiper-slide">
                 <template id="memo-template">
@@ -88,22 +101,6 @@
                     </div>
                 </template>
                 <div id="empty-list-placeholder">YOU HAVE NO ACTIVE MEMOES</div>
-                <!-- CONFIRM DELETE MODAL -->
-                <section id="delete-confirm-modal" class="modal"> 
-                    <div id="delete-confirm-text-ctn">
-                        <div class="delete-confirm-text">
-                            Are you sure you want 
-                            <br/>
-                            to delete the memo:
-                            <br/>
-                            <div id="delete-confirm-title">X</div>
-                        </div>
-                        <div class="memo-btn-bar">
-                            <button class="delete" onclick="deleteMemo()">Delete</button>
-                            <button class="cancel" onclick="undoDeleteMemo()">Cancel</button>
-                        </div>
-                    </div>
-                </section>
             </div>
             <!-- SETTINGS PAGE -->
             <div id="settings-page" class="swiper-slide">

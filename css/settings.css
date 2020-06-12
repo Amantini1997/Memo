@@ -56,9 +56,9 @@ input:checked + .slider {
     background-color: var(--success-color);
 }
 
-input:focus + .slider {
+/* input:focus + .slider {
     box-shadow: 0 0 1px green;
-}
+} */
 
 input:checked + .slider:before {
     -webkit-transform: translateX(26px);

@@ -22,6 +22,29 @@
 
 button {
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+button > span {
+    position: absolute;
+    border-radius: 50%;
+    background-color: gray;
+    animation: ripple .3s linear;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes ripple {
+    from {
+        opacity: 1;
+        width: 0;
+        height: 0;
+    } to {
+        opacity: 0;
+        width: 40vmin;
+        height: 40vmin;
+    }
 }
 
 /* *[id$="page"] */
@@ -29,7 +52,7 @@ button {
     padding: var(--padding-page);
     padding-top: calc(var(--padding-page) - var(--page-title-margin-bottom));
     margin: auto;
-    height: 100vh;
+    height: 100%;
 }
 
 textarea {
