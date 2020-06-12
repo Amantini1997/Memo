@@ -24,11 +24,14 @@
     background-color: white;
     min-height: 100px;
     border-radius: 10px;
-    box-shadow: 0px 17px 20px -15px black;;
+    box-shadow: 0px 17px 20px -15px black;
     text-align: center;
-    margin-bottom: 20px;
     word-break: break-all;
     animation: all 1s;
+}
+
+.memo:not(:last-child) {
+    margin-bottom: 20px;
 }
 
 .memo-info {
