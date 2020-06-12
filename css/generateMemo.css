@@ -99,11 +99,12 @@
 /* TITLE */
 
 .title-input {    
-    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     display: flex;
+    align-items: center;
     /* justify-content: left; */
     /* grid-template-columns: 1fr 8fr; */
-    align-items: center;
 }
 
 .title-input > label {
@@ -112,7 +113,7 @@
 
 .title-input > input {
     max-width: 75%;
-}
+} */
 
 /* DATE-TIME */
 

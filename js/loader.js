@@ -13,7 +13,6 @@ function loadContent() {
     let memoes = loadMemoes(false);
     window.memoes = renderMemoes(memoes);
     saveMemoes();
-    lock();
     loadSwiper();
     loadPickers();
     // setCalendarCallback();
