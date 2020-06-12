@@ -24,7 +24,9 @@
 }
 
 .top-modal > img {
-    height: -webkit-fill-available;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .top-modal.display {
