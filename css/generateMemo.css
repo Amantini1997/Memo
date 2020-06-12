@@ -108,21 +108,14 @@
 /* TITLE */
 
 .title-input {    
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
-    /* justify-content: left; */
-    /* grid-template-columns: 1fr 8fr; */
-}
-
-.title-input > label {
-    width: 20%;
 }
 
 .title-input > input {
-    max-width: 75%;
-} */
+    flex: 1;
+} 
 
 /* DATE-TIME */
 
@@ -135,11 +128,13 @@
 }
 
 .datetime-input > #date {
-    width: calc(100% / 7 * 3);
+    /* width: calc(100% / 7 * 3); */
+    flex: 2;
 }
 
 .datetime-input > #time {
-    width: calc(100% / 7 * 1.4);
+    /* width: calc(100% / 7 * 1.4); */
+    flex: 1;
 }
 
 
