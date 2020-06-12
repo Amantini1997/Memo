@@ -1,14 +1,15 @@
 :root {
-    --page-title-height: 9vh;
-    --page-title-font-size: 7vh;
+    --viewport-height-one: 1vh;
+    --page-title-height: calc(var(--viewport-height-one) * 9);
+    --page-title-font-size: calc(var(--viewport-height-one) * 7);
     --page-title-margin-bottom: 15px;
     --padding-page: 20px;
     --border-radius: 10px;
-    --max-height-no-title: calc(100vh - var(--page-title-height) - var(--page-title-margin-bottom));
+    --max-height-no-title: calc(calc(var(--viewport-height-one) * 100) - var(--page-title-height) - var(--page-title-margin-bottom));
     --modal-animation-time: .2s;
     --modal-content-animation-time: .2s;
-    --top-modal-font-size: 2vh; 
-    --std-text-size: 2vh;
+    --top-modal-font-size: calc(var(--viewport-height-one) * 2); 
+    --std-text-size: calc(var(--viewport-height-one) * 2);
 }
 
 * {
@@ -24,6 +25,13 @@ button {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+}
+
+.swiper-container {
+    width: 100vw;
+    height: var(--max-height-no-title);
+    /* overflow: visible; */
+    margin-top: var(--page-title-margin-bottom);
 }
 
 /* *[id$="page"] */
@@ -60,13 +68,6 @@ body {
     /* margin-bottom: var(--page-title-margin-bottom); */
     overflow: hidden;
     /* box-shadow: -1px 10px 20px black; */
-}
-
-.swiper-container {
-    width: 100vw;
-    height: var(--max-height-no-title);
-    /* overflow: visible; */
-    margin-top: var(--page-title-margin-bottom);
 }
 
 @media only screen and (hover: hover)

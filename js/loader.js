@@ -15,6 +15,7 @@ function loadContent() {
     saveMemoes();
     loadSwiper();
     loadPickers();
+    savePageHeight();
     // setCalendarCallback();
 }
 
@@ -56,4 +57,9 @@ function loadTimePicker() {
 function updateHeader() {
     const pageTitle = document.querySelector("#page-title");
     pageTitle.innerHTML = PAGE_TITLES[window.mySwiper.activeIndex];
+}
+
+function savePageHeight() {
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) / 100;
+    document.documentElement.style.setProperty("--viewport-height-one", vh + "px");
 }

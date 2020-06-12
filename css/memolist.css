@@ -85,10 +85,10 @@ hr {
     justify-content: space-evenly;
     box-sizing: border-box;
     width: 100%;
-    height: 8vh;
+    height: calc(var(--viewport-height-one) * 8);
     background-color: var(--bg-color);
-    padding-top: .8vh;
-    padding-bottom: .8vh;
+    padding-top: calc(var(--viewport-height-one) * .8);
+    padding-bottom: calc(var(--viewport-height-one) * .8);
     
 }
 
@@ -128,7 +128,7 @@ hr {
 
 #delete-confirm-modal {
     top: var(--page-title-height);
-    height: calc(100vh - var(--page-title-height));
+    height: calc(var(--viewport-height-one) * 100 - var(--page-title-height));
 }
 
 #delete-confirm-text-ctn {

@@ -65,7 +65,7 @@
 #add-memo-ctn {
     background-color: var(--bg-color);
     border-radius: var(--border-radius);
-    height: 70vh;
+    height: calc(var(--viewport-height-one) * 70);
     max-width: 100%;
     overflow: hidden;
     padding: 10px;
@@ -88,10 +88,6 @@
     margin: 0px 0px 0px 10px;
     padding-top: 0px; 
 }
-
-/* #add-memo-ctn label:first {
-    padding-top: 0px;
-} */
 
 #add-memo-ctn input {
     border: none;
@@ -123,17 +119,14 @@
     width: 100%;
     display: flex;
     align-items: center;
-    /* grid-template-columns: 1fr 3fr 1fr 2fr; */
     background-color: var(--bg-color);
 }
 
 .datetime-input > #date {
-    /* width: calc(100% / 7 * 3); */
     flex: 2;
 }
 
 .datetime-input > #time {
-    /* width: calc(100% / 7 * 1.4); */
     flex: 1;
 }
 
@@ -165,14 +158,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
-    padding-top: 7vh;
+    padding-top: calc(var(--viewport-height-one) * 7);
 }
 
 #btn-container > button {
     border-radius: 20px;
     border: none;
     width: 80%;
-    height: 7vh;
+    height: calc(var(--viewport-height-one) * 7);
     margin: auto;
     font-size: larger;
     font-weight: 500;
