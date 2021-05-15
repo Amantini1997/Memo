@@ -96,7 +96,7 @@
     margin-right: 10px;
     margin-top: 5px;
     text-align: center;
-    font-size: calc(var(--std-text-size) * .9);
+    font-size: calc(var(--std-text-size) * 1.1);
     background-color: var(--bg-color);
 } 
 
@@ -132,21 +132,24 @@
 
 
 /* TEXT AREA */
-
-#add-memo-ctn > .textarea-input {
-    display: flex;
-    flex-direction: column;
-    height: 66%;
-}
-
 #add-memo-ctn textarea {
     box-shadow: inset -1px 2px 18px -7px;
-    margin-top: 10px;
+    margin: 10px 5px 5px;
     padding: 10px;
     background-color: var(--bg-color);
     border: none;
     height: 100%;
     border-radius: var(--border-radius);
+}
+
+.textarea-input {
+    display: flex;
+    flex-direction: column;
+    height: 66%;
+}
+
+.textarea-input > label {
+    margin-left: 5px;
 }
 
 

@@ -4,10 +4,10 @@ import { saveMemoes, loadMemoes, renderMemoes } from "./memolist.js";
 document.addEventListener("DOMContentLoaded", loadContent);
 
 const PAGE_TITLES = [
-    "NEW MEMO",
-    "MEMOES",
-    "SETTINGS"
-]
+    "New Memo",
+    "Memoes",
+    "Settings"
+];
 
 function loadContent() {
     let memoes = loadMemoes(false);
