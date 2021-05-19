@@ -1,7 +1,7 @@
 {
     "short_name": "Memo",
     "name": "Todo list",
-    "description": "Write down your todoes, and never forget them",
+    "description": "Write down your memoes, and never forget them",
     "icons": [
         {
             "src": "img/192x192.png",
