@@ -1,3 +1,9 @@
+*::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 #memo-list-page {
     overflow-y: scroll;    
     overflow-x: hidden; 
